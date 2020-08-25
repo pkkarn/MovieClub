@@ -1,0 +1,25 @@
+.movie{
+  position: relative;
+  text-align: center;
+  color: white;
+  height:25%;
+  width: 20%;
+  float: left;
+  margin: 10px;
+}
+
+.movie-text {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-weight: bold;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: black;
+  z-index: 200;
+}

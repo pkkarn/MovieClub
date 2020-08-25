@@ -3,14 +3,17 @@
 
 {% for movie in movies %}
 
-<div class="card" style="width: 12rem;">
-  <img class="card-img-top" src="/media/{{movie.moviePoster}}" alt="{{movie.movieName}}">
-  <div class="card-body">
-      <p class="badge badge-warning">{{movie.releasedDate}}</p>
-    <h5 class="card-title">{{movie.movieName}}</h5>
-    <p class="card-text">{{movie.movieDescription|slice:":200"}}</p>
-    <a href="#" class="btn btn-warning">View</a>
-  </div>
+<div class="movie">
+    <img src="/media/{{movie.moviePoster}}" alt="{{movie.movieName}}" style="width:100%;">
+  <div class="overlay"></div>
+  <div class="movie-text">
+
+    <span class="title">{{movie.movieName}}</span>
+      <br>
+    <p class="badge badge-warning">Release Date: {{movie.releasedDate}}</p>
+    <br>
+      {{movie.movieDescription|slice:":200"}}
+    </div>
 </div>
 
 {% endfor %}
