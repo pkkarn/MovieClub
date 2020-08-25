@@ -1,18 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<form method="get">
+    {{myFilter.form}}
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
 {% for movie in movies %}
+
+
 
 <div class="movie">
     <img src="/media/{{movie.moviePoster}}" alt="{{movie.movieName}}" style="width:100%;">
-  <div class="overlay"></div>
-  <div class="movie-text">
+    <div class="overlay"></div>
+    <div class="movie-text">
 
-    <span class="title">{{movie.movieName}}</span>
-      <br>
-    <p class="badge badge-warning">Release Date: {{movie.releasedDate}}</p>
-    <br>
-      {{movie.movieDescription|slice:":200"}}
+        <span class="title">{{movie.movieName}}</span>
+        <br>
+        <p class="badge badge-warning">Release Date: {{movie.releasedDate}}</p>
+        <br>
+        {{movie.movieDescription|slice:":200"}}
     </div>
 </div>
 
